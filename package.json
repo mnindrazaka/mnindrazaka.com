@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tamagui/config": "^1.15.14",
-    "@tamagui/lucide-icons": "^1.15.14",
-    "@tamagui/next-plugin": "^1.15.14",
-    "@tamagui/next-theme": "^1.15.14",
+    "@tamagui/config": "1.14.9",
+    "@tamagui/lucide-icons": "1.14.9",
+    "@tamagui/next-plugin": "1.14.9",
+    "@tamagui/next-theme": "1.14.9",
     "@types/node": "18.15.11",
     "@types/react": "18.0.37",
     "@types/react-dom": "18.0.11",
@@ -29,7 +29,7 @@
     "react-native-web": "^0.19.4",
     "react-syntax-highlighter": "^15.5.0",
     "remark-gfm": "^3.0.1",
-    "tamagui": "^1.15.14",
+    "tamagui": "1.14.9",
     "typescript": "5.0.4"
   }
 }

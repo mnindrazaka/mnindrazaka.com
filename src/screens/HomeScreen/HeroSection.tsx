@@ -17,10 +17,10 @@ export function HeroSection() {
           width={280}
           height={280}
           source={{
-            uri: "https://mnindrazaka.com/nextimg/%2F_next%2Fstatic%2Fimages%2Fprofile-7e13cea6cf8bd2e71e187825706b750e.jpeg/640/75?url=%2F_next%2Fstatic%2Fimages%2Fprofile-7e13cea6cf8bd2e71e187825706b750e.jpeg&w=640&q=75",
+            uri: "https://media.licdn.com/dms/image/C5603AQEsF3F--ivLJg/profile-displayphoto-shrink_800_800/0/1622887591562?e=1687392000&v=beta&t=XXWTWu0wWpM-5b3Mwob8sWXCKm0oYiuxTSriQc-pUk8",
           }}
           defaultSource={{
-            uri: "https://mnindrazaka.com/nextimg/%2F_next%2Fstatic%2Fimages%2Fprofile-7e13cea6cf8bd2e71e187825706b750e.jpeg/640/75?url=%2F_next%2Fstatic%2Fimages%2Fprofile-7e13cea6cf8bd2e71e187825706b750e.jpeg&w=640&q=75",
+            uri: "https://media.licdn.com/dms/image/C5603AQEsF3F--ivLJg/profile-displayphoto-shrink_800_800/0/1622887591562?e=1687392000&v=beta&t=XXWTWu0wWpM-5b3Mwob8sWXCKm0oYiuxTSriQc-pUk8",
           }}
           alt="image profile"
         />

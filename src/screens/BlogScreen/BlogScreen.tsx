@@ -16,7 +16,7 @@ export type BlogScreenProps = {
 
 export function BlogScreen(props: BlogScreenProps) {
   return (
-    <ScrollView>
+    <ScrollView overflow="scroll">
       <Container paddingVertical="$10" space="$8">
         <Link href="/" style={{ textDecoration: "none" }}>
           <XStack alignItems="center" space="$2">

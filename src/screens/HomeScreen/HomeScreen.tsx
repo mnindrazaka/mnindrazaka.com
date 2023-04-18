@@ -20,7 +20,7 @@ export type HomeScreenProps = {
 
 export function HomeScreen(props: HomeScreenProps) {
   return (
-    <ScrollView>
+    <ScrollView overflow="scroll">
       <Container>
         <HeroSection />
         <SpecialitiesSection />

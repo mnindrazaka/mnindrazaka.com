@@ -3,6 +3,7 @@ import React from "react";
 import {
   Anchor,
   Button,
+  H3,
   H4,
   H5,
   Image,
@@ -76,10 +77,9 @@ export function TeachingSection() {
         <YStack space="$8" $gtMd={{ flexDirection: "row" }}>
           <YStack
             flex={1}
+            width="100%"
             space="$3"
             theme="purple"
-            padding="$5"
-            borderRadius="$5"
             height="100%"
             justifyContent="space-between"
           >
@@ -98,27 +98,27 @@ export function TeachingSection() {
               <H4>GATHERLOOP</H4>
             </XStack>
 
+            <H3 fontWeight="normal">
+              Empowering developers to reach their potential through community
+            </H3>
+
             <Paragraph size="$5">
-              Driven by my passion for teaching and mentoring, I founded
-              Gatherloop, a community dedicated to helping aspiring developers
-              deepen their skills and land their dream jobs. Through Gatherloop,
-              I provide personalized mentorship and training to help individuals
-              build their confidence and become valuable contributors to the
-              industry.
+              I build a community called Gatherloop to help aspiring developers
+              reach their potential with monthly sharing session, workshop, and
+              other events.
             </Paragraph>
 
             <XStack>
               <Anchor href="http://gatherloop.co/" textDecorationLine="none">
-                <Button icon={ArrowRightCircle}>Read More</Button>
+                <Button icon={ArrowRightCircle}>READ MORE</Button>
               </Anchor>
             </XStack>
           </YStack>
           <YStack
             flex={1}
+            width="100%"
             space="$3"
             theme="purple"
-            padding="$5"
-            borderRadius="$5"
             height="100%"
             justifyContent="space-between"
           >
@@ -137,27 +137,27 @@ export function TeachingSection() {
               <H4>PRIVATE MENTORING</H4>
             </XStack>
 
+            <H3 fontWeight="normal">
+              Personalized Mentorship for Aspiring Developers
+            </H3>
+
             <Paragraph size="$5">
-              I offer private mentoring services to help new developers achieve
-              their career goals. I believe in creating a customized learning
-              roadmap based on the individual learning progress, goals, and
-              interests. Through personalized guidance and one-on-one feedback,
-              I aim to help my mentees grow and become successful in their
-              chosen career path.
+              I offer personalized mentoring service to help new developers
+              achieve their career goals through customized learning roadmaps,
+              one-on-one guidance, and feedback.
             </Paragraph>
 
             <XStack>
               <Anchor href="http://gatherloop.co/" textDecorationLine="none">
-                <Button icon={ArrowRightCircle}>Read More</Button>
+                <Button icon={ArrowRightCircle}>READ MORE</Button>
               </Anchor>
             </XStack>
           </YStack>
           <YStack
             flex={1}
+            width="100%"
             space="$3"
             theme="purple"
-            padding="$5"
-            borderRadius="$5"
             height="100%"
             justifyContent="space-between"
           >
@@ -176,12 +176,14 @@ export function TeachingSection() {
               <H4>MINICLASS WEB</H4>
             </XStack>
 
+            <H3 fontWeight="normal">
+              Comprehensive Learning Roadmap For Freshmen
+            </H3>
+
             <Paragraph size="$5">
-              As an active member of the IT community at State Polytechnic of
-              Malang, I took the initiative to create a comprehensive web
-              development learning roadmap for freshmen. By teaching the
-              fundamentals and providing guidance on industry best practices, I
-              helped them jumpstart their journey in web development.
+              I created a web development learning roadmap for freshmen at State
+              Polytechnic of Malang, teaching them the fundamentals and industry
+              best practices to jumpstart their journey.
             </Paragraph>
 
             <XStack>
@@ -189,7 +191,7 @@ export function TeachingSection() {
                 href="https://github.com/wrideveloper/miniclass-web"
                 textDecorationLine="none"
               >
-                <Button icon={ArrowRightCircle}>Read More</Button>
+                <Button icon={ArrowRightCircle}>READ MORE</Button>
               </Anchor>
             </XStack>
           </YStack>

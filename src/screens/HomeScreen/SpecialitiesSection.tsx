@@ -23,18 +23,21 @@ function SkillCard({
       padding="$5"
       borderRadius="$5"
     >
-      <YStack
-        theme="purple_Button"
-        backgroundColor="$background"
-        borderRadius="$12"
-        width={40}
-        height={40}
-        justifyContent="center"
-        alignItems="center"
-      >
-        {icon}
-      </YStack>
-      <H4>{title}</H4>
+      <XStack space="$3" alignItems="center">
+        <YStack
+          theme="purple_Button"
+          backgroundColor="$background"
+          borderRadius="$12"
+          width={40}
+          height={40}
+          justifyContent="center"
+          alignItems="center"
+        >
+          {icon}
+        </YStack>
+        <H4>{title}</H4>
+      </XStack>
+
       <Paragraph size="$5">{description}</Paragraph>
     </YStack>
   );

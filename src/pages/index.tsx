@@ -19,7 +19,12 @@ export const getStaticProps: GetStaticProps<HomeScreenProps> = async () => {
         description: meta.data.description,
         href: `/blog/${fileName.replace(".md", "")}`,
         imageUrl: meta.data.image,
-        date: new Date(meta.data.date).toISOString(),
+        date: new Date(meta.data.date).toLocaleDateString(undefined, {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        }),
       });
     }
   }

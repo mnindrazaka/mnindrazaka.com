@@ -59,12 +59,7 @@ export function BlogSection(props: BlogSectionProps) {
                   borderRadius="$5"
                 />
                 <H5 flex={1} textAlign="center" $gtXs={{ textAlign: "left" }}>
-                  {new Date(date).toLocaleDateString(undefined, {
-                    weekday: "long",
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
+                  {date}
                 </H5>
                 <H3 textAlign="center" $gtXs={{ textAlign: "left" }}>
                   {title}

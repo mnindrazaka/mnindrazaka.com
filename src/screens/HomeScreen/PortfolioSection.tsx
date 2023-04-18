@@ -29,6 +29,12 @@ export function PortfolioSection() {
             Explore my collection of innovative libraries and tools that
             showcase my expertise in web development.
           </Paragraph>
+          <Anchor
+            href="http://github.com/mnindrazaka"
+            textDecorationLine="none"
+          >
+            <Button icon={ArrowRightCircle}>SEE OTHER WORKS</Button>
+          </Anchor>
         </YStack>
 
         <YStack flex={1} space="$3" width="100%" justifyContent="space-between">

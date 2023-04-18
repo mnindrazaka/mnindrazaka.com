@@ -1,23 +1,12 @@
 import React from "react";
 import { Container } from "@/components";
-import {
-  Anchor,
-  Button,
-  H3,
-  H5,
-  Image,
-  Paragraph,
-  ScrollView,
-  XStack,
-  YStack,
-} from "tamagui";
+import { ScrollView } from "tamagui";
 import { HeroSection } from "./HeroSection";
 import { SpecialitiesSection } from "./SpecialitiesSection";
 import { TeachingSection } from "./TeachingSection";
 import { PortfolioSection } from "./PortfolioSection";
-import Link from "next/link";
-import { ArrowRightCircle } from "@tamagui/lucide-icons";
 import { BlogSection } from "./BlogSection";
+import { FooterSection } from "./FooterSection";
 
 export type HomeScreenProps = {
   posts: {
@@ -39,6 +28,7 @@ export function HomeScreen(props: HomeScreenProps) {
         <PortfolioSection />
         <BlogSection posts={props.posts} />
       </Container>
+      <FooterSection />
     </ScrollView>
   );
 }

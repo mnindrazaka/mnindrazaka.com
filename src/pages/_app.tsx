@@ -1,3 +1,4 @@
+import "./global.css";
 import { NextThemeProvider, useRootTheme } from "@tamagui/next-theme";
 import { AppProps } from "next/app";
 import Head from "next/head";

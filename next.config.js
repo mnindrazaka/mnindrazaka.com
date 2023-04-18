@@ -3,7 +3,15 @@ const { withTamagui } = require("@tamagui/next-plugin");
 process.env.TAMAGUI_TARGET = "web";
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  webpack: function (config) {
+    config.module.rules.push({
+      test: /\.md$/,
+      use: "raw-loader",
+    });
+    return config;
+  },
+};
 
 module.exports = function (name, { defaultConfig }) {
   let config = {

@@ -13,6 +13,7 @@ export function PortfolioSection() {
       borderWidth="$1"
       padding="$8"
       borderRadius="$8"
+      elevation="$1"
     >
       <YStack space="$8" $gtMd={{ flexDirection: "row" }}>
         <YStack flex={1} space="$3" width="100%">

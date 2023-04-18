@@ -24,6 +24,7 @@ function SkillCard({
       borderWidth="$1"
       padding="$5"
       borderRadius="$5"
+      elevation="$1"
     >
       <XStack space="$3" alignItems="center">
         <YStack

@@ -39,9 +39,11 @@ export function BlogSection(props: BlogSectionProps) {
             Explore My Technical Blog for Insightful Reads
           </Paragraph>
         </YStack>
-        <Button theme="purple" icon={ArrowRightCircle}>
-          SEE THE FULL BLOG
-        </Button>
+        <Link href="/blog" style={{ textDecoration: "none" }}>
+          <Button theme="purple" icon={ArrowRightCircle}>
+            SEE THE FULL BLOG
+          </Button>
+        </Link>
       </YStack>
 
       <YStack space="$8" $gtXs={{ flexDirection: "row" }}>

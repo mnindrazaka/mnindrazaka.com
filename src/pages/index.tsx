@@ -29,7 +29,14 @@ export const getStaticProps: GetStaticProps<HomeScreenProps> = async () => {
     }
   }
 
-  return { props: { posts } };
+  return {
+    props: {
+      posts: posts.sort(
+        (prevPost, nextPost) =>
+          new Date(nextPost.date).getTime() - new Date(prevPost.date).getTime()
+      ),
+    },
+  };
 };
 
 export default HomeScreen;

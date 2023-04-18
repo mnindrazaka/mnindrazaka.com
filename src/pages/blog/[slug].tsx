@@ -1,8 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import {
-  BlogDetailScreen,
-  BlogDetailScreenProps,
-} from "../../screens/BlogDetailScreen";
+import { BlogDetailScreen, BlogDetailScreenProps } from "@/screens";
 import matter from "gray-matter";
 import fs from "fs";
 import path from "path";

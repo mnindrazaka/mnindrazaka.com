@@ -45,10 +45,10 @@ export function BlogDetailScreen({
       </Head>
       <ScrollView>
         <Container maxWidth={640} space="$5" paddingVertical="$8">
-          <Link href="/" style={{ textDecoration: "none" }}>
+          <Link href="/blog" style={{ textDecoration: "none" }}>
             <XStack alignItems="center" space="$2">
               <ArrowLeft />
-              <Paragraph size="$6">Back to Home</Paragraph>
+              <Paragraph size="$6">Back to Blog</Paragraph>
             </XStack>
           </Link>
           <YStack>

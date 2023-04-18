@@ -87,6 +87,8 @@ export function TeachingSection() {
               <YStack
                 theme="purple_Button"
                 backgroundColor="$background"
+                borderColor="$borderColor"
+                borderWidth="$1"
                 borderRadius="$12"
                 width={40}
                 height={40}
@@ -127,6 +129,8 @@ export function TeachingSection() {
                 theme="purple_Button"
                 backgroundColor="$background"
                 borderRadius="$12"
+                borderColor="$borderColor"
+                borderWidth="$1"
                 width={40}
                 height={40}
                 justifyContent="center"
@@ -166,6 +170,8 @@ export function TeachingSection() {
                 theme="purple_Button"
                 backgroundColor="$background"
                 borderRadius="$12"
+                borderColor="$borderColor"
+                borderWidth="$1"
                 width={40}
                 height={40}
                 justifyContent="center"

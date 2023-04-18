@@ -20,6 +20,8 @@ function SkillCard({
       space="$3"
       theme="purple"
       backgroundColor="$background"
+      borderColor="$borderColor"
+      borderWidth="$1"
       padding="$5"
       borderRadius="$5"
     >
@@ -27,6 +29,8 @@ function SkillCard({
         <YStack
           theme="purple_Button"
           backgroundColor="$background"
+          borderColor="$borderColor"
+          borderWidth="$1"
           borderRadius="$12"
           width={40}
           height={40}

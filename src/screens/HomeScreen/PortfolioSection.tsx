@@ -9,6 +9,8 @@ export function PortfolioSection() {
       space="$8"
       theme="purple"
       backgroundColor="$background"
+      borderColor="$borderColor"
+      borderWidth="$1"
       padding="$8"
       borderRadius="$8"
     >

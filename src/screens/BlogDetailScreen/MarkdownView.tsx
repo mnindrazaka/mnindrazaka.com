@@ -1,9 +1,19 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
-import gfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { Anchor } from "tamagui";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import {
+  Anchor,
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  Paragraph,
+  Text,
+  YStack,
+} from "tamagui";
 
 type MarkdownViewProps = {
   content: string;
@@ -12,56 +22,73 @@ type MarkdownViewProps = {
 export const MarkdownView = ({ content }: MarkdownViewProps) => {
   return (
     <ReactMarkdown
-      skipHtml={false}
-      remarkPlugins={[gfm]}
-      components={{
-        // p: ({ children }) => {
-        //   return <Text>{children}</Text>;
-        // },
-        // h1: ({ level, children }) => {
-        //   return (
-        //     <Heading
-        //       size={
-        //         level === 6
-        //           ? "xs"
-        //           : level === 5
-        //           ? "sm"
-        //           : level === 4
-        //           ? "md"
-        //           : level === 3
-        //           ? "lg"
-        //           : level === 2
-        //           ? "xl"
-        //           : "2xl"
-        //       }
-        //     >
-        //       {children}
-        //     </Heading>
-        //   );
-        // },
-        // code: ({ lang, children }) => {
-        //   return (
-        //     <div className="my-4" role="code">
-        //       <SyntaxHighlighter style={materialDark} language={lang}>
-        //         {children}
-        //       </SyntaxHighlighter>
-        //     </div>
-        //   );
-        // },
-        // blockquote: ({ children }) => {
-        //   return <Alert colorScheme="purple">{children}</Alert>;
-        // },
+      allowDangerousHtml
+      renderers={{
+        paragraph: ({ children }) => {
+          return <Paragraph size="$5">{children}</Paragraph>;
+        },
+        heading: ({ level, children }) => {
+          return level === 6 ? (
+            <H6 marginVertical="$3">{children}</H6>
+          ) : level === 5 ? (
+            <H5 marginVertical="$3">{children}</H5>
+          ) : level === 4 ? (
+            <H4 marginVertical="$3">{children}</H4>
+          ) : level === 3 ? (
+            <H3 marginVertical="$3">{children}</H3>
+          ) : level === 2 ? (
+            <H2 marginVertical="$3">{children}</H2>
+          ) : (
+            <H1 marginVertical="$3">{children}</H1>
+          );
+        },
+        code: ({ language, value }) => {
+          return (
+            <YStack marginVertical="$3">
+              <SyntaxHighlighter
+                style={vscDarkPlus}
+                language={language}
+                showLineNumbers
+              >
+                {value}
+              </SyntaxHighlighter>
+            </YStack>
+          );
+        },
+        blockquote: ({ children }) => {
+          return (
+            <YStack
+              theme="purple"
+              backgroundColor="$background"
+              borderColor="$borderColor"
+              borderWidth="$1"
+              padding="$2"
+              borderRadius="$2"
+              marginVertical="$5"
+            >
+              {children}
+            </YStack>
+          );
+        },
         link: ({ children, href }) => (
-          <Anchor href={href} target="_blank">
+          <Anchor size="$5" href={href} target="_blank">
             {children}
           </Anchor>
         ),
-        // code: ({ children }) => <Code>{children}</Code>,
-        // table: ({ children }) => <Table>{children}</Table>,
-        // tableHead: ({ children }) => <Thead>{children}</Thead>,
-        // tableBody: ({ children }) => <Tbody>{children}</Tbody>,
-        // tableRow: ({ children }) => <Tr>{children}</Tr>,
-        // tableCell: ({ children }) => <Td>{children}</Td>,
+        inlineCode: ({ children }) => (
+          <Text
+            theme="purple"
+            backgroundColor="$background"
+            borderColor="$borderColor"
+            borderWidth="$1"
+            paddingVertical="$1"
+            paddingHorizontal="$2"
+            borderRadius="$2"
+            fontFamily="$body"
+          >
+            <code>{children}</code>
+          </Text>
+        ),
       }}
     >
       {content}

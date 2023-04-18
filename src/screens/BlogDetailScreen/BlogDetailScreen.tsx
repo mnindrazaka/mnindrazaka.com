@@ -1,7 +1,18 @@
 import { Container } from "@/components";
+import { ArrowLeft, ArrowLeftCircle } from "@tamagui/lucide-icons";
 import Head from "next/head";
+import Link from "next/link";
 import React from "react";
-import { H2, H5, Image, ScrollView } from "tamagui";
+import {
+  H2,
+  H4,
+  H5,
+  Image,
+  Paragraph,
+  ScrollView,
+  XStack,
+  YStack,
+} from "tamagui";
 import { MarkdownView } from "./MarkdownView";
 
 export type BlogDetailScreenProps = {
@@ -33,18 +44,29 @@ export function BlogDetailScreen({
         <meta property="og:image" content={image} />
       </Head>
       <ScrollView>
-        <Container>
-          <H2 fontWeight="normal">{title}</H2>
-          <H5>{date}</H5>
-          <Image
-            source={{ uri: image }}
-            defaultSource={{ uri: image }}
-            aspectRatio={2 / 1}
-            maxWidth={480}
-            width="100%"
-            alt={title}
-          />
-          <H5>{caption}</H5>
+        <Container maxWidth={640} space="$5" paddingVertical="$8">
+          <Link href="/" style={{ textDecoration: "none" }}>
+            <XStack alignItems="center" space="$2">
+              <ArrowLeft />
+              <Paragraph size="$6">Back to Home</Paragraph>
+            </XStack>
+          </Link>
+          <YStack>
+            <H2 fontWeight="normal">{title}</H2>
+            <H5>{date}</H5>
+          </YStack>
+
+          <YStack space="$2">
+            <Image
+              source={{ uri: image }}
+              defaultSource={{ uri: image }}
+              aspectRatio={2 / 1}
+              width="100%"
+              alt={title}
+              borderRadius="$5"
+            />
+            <MarkdownView content={caption} />
+          </YStack>
           <MarkdownView content={content} />
         </Container>
       </ScrollView>

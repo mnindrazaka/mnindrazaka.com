@@ -1,16 +1,46 @@
-import { Divider } from "@/components";
+import { Divider, ItemCard, ItemCardProps } from "@/components";
 import { ArrowRightCircle, Book, Share2, Users } from "@tamagui/lucide-icons";
 import React from "react";
-import {
-  Anchor,
-  Button,
-  H3,
-  H4,
-  Image,
-  Paragraph,
-  XStack,
-  YStack,
-} from "tamagui";
+import { H4, Image, Paragraph, XStack, YStack } from "tamagui";
+
+const items: ItemCardProps[] = [
+  {
+    title: "GATHERLOOP",
+    tagline: "Empowering developers to reach their potential through community",
+    description:
+      "I build a community called Gatherloop to help aspiring developers reach their potential with monthly sharing session, workshop, and other events.",
+    icon: <Share2 />,
+    button: {
+      title: "READ MORE",
+      icon: ArrowRightCircle,
+      href: "http://gatherloop.co",
+    },
+  },
+  {
+    title: "PRIVATE MENTORING",
+    tagline: "Personalized Mentorship for Aspiring Developers",
+    description:
+      "I offer personalized mentoring service to help new developers achieve their career goals through customized learning roadmaps, one-on-one guidance, and feedback.",
+    icon: <Users />,
+    button: {
+      title: "READ MORE",
+      icon: ArrowRightCircle,
+      href: "http://gatherloop.co",
+    },
+  },
+  {
+    title: "MINICLASS WEB",
+    tagline: "Comprehensive Learning Roadmap For Freshmen",
+    description:
+      "I created a web development learning roadmap for freshmen at State Polytechnic of Malang, teaching them the fundamentals and industry best practices to jumpstart their journey.",
+    icon: <Book />,
+    button: {
+      title: "READ MORE",
+      icon: ArrowRightCircle,
+      href: "https://github.com/wrideveloper/miniclass-web",
+    },
+  },
+];
 
 export function TeachingSection() {
   return (
@@ -67,132 +97,17 @@ export function TeachingSection() {
         </XStack>
 
         <YStack space="$8" $gtMd={{ flexDirection: "row" }}>
-          <YStack
-            flex={1}
-            width="100%"
-            space="$3"
-            theme="purple"
-            height="100%"
-            justifyContent="space-between"
-          >
-            <XStack alignItems="center" space="$3">
-              <YStack
-                theme="purple_Button"
-                backgroundColor="$background"
-                borderColor="$borderColor"
-                borderWidth="$1"
-                borderRadius="$12"
-                width={40}
-                height={40}
-                justifyContent="center"
-                alignItems="center"
-              >
-                <Share2 />
-              </YStack>
-              <H4>GATHERLOOP</H4>
-            </XStack>
-
-            <H3 fontWeight="normal">
-              Empowering developers to reach their potential through community
-            </H3>
-
-            <Paragraph size="$5">
-              I build a community called Gatherloop to help aspiring developers
-              reach their potential with monthly sharing session, workshop, and
-              other events.
-            </Paragraph>
-
-            <XStack>
-              <Anchor href="http://gatherloop.co/" textDecorationLine="none">
-                <Button icon={ArrowRightCircle}>READ MORE</Button>
-              </Anchor>
-            </XStack>
-          </YStack>
-          <YStack
-            flex={1}
-            width="100%"
-            space="$3"
-            theme="purple"
-            height="100%"
-            justifyContent="space-between"
-          >
-            <XStack alignItems="center" space="$3">
-              <YStack
-                theme="purple_Button"
-                backgroundColor="$background"
-                borderRadius="$12"
-                borderColor="$borderColor"
-                borderWidth="$1"
-                width={40}
-                height={40}
-                justifyContent="center"
-                alignItems="center"
-              >
-                <Users />
-              </YStack>
-              <H4>PRIVATE MENTORING</H4>
-            </XStack>
-
-            <H3 fontWeight="normal">
-              Personalized Mentorship for Aspiring Developers
-            </H3>
-
-            <Paragraph size="$5">
-              I offer personalized mentoring service to help new developers
-              achieve their career goals through customized learning roadmaps,
-              one-on-one guidance, and feedback.
-            </Paragraph>
-
-            <XStack>
-              <Anchor href="http://gatherloop.co/" textDecorationLine="none">
-                <Button icon={ArrowRightCircle}>READ MORE</Button>
-              </Anchor>
-            </XStack>
-          </YStack>
-          <YStack
-            flex={1}
-            width="100%"
-            space="$3"
-            theme="purple"
-            height="100%"
-            justifyContent="space-between"
-          >
-            <XStack alignItems="center" space="$3">
-              <YStack
-                theme="purple_Button"
-                backgroundColor="$background"
-                borderRadius="$12"
-                borderColor="$borderColor"
-                borderWidth="$1"
-                width={40}
-                height={40}
-                justifyContent="center"
-                alignItems="center"
-              >
-                <Book />
-              </YStack>
-              <H4>MINICLASS WEB</H4>
-            </XStack>
-
-            <H3 fontWeight="normal">
-              Comprehensive Learning Roadmap For Freshmen
-            </H3>
-
-            <Paragraph size="$5">
-              I created a web development learning roadmap for freshmen at State
-              Polytechnic of Malang, teaching them the fundamentals and industry
-              best practices to jumpstart their journey.
-            </Paragraph>
-
-            <XStack>
-              <Anchor
-                href="https://github.com/wrideveloper/miniclass-web"
-                textDecorationLine="none"
-              >
-                <Button icon={ArrowRightCircle}>READ MORE</Button>
-              </Anchor>
-            </XStack>
-          </YStack>
+          {items.map((item) => (
+            <ItemCard
+              key={item.title}
+              {...item}
+              isTransparent
+              flex={1}
+              width="100%"
+              height="100%"
+              justifyContent="space-between"
+            />
+          ))}
         </YStack>
       </YStack>
     </YStack>

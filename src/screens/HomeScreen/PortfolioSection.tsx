@@ -1,7 +1,40 @@
-import { Divider } from "@/components";
+import { Divider, ItemCard, ItemCardProps } from "@/components";
 import { ArrowRightCircle } from "@tamagui/lucide-icons";
 import React from "react";
 import { Anchor, Button, H3, H4, Paragraph, XStack, YStack } from "tamagui";
+
+const items: ItemCardProps[] = [
+  {
+    title: "CRUDONE",
+    description:
+      "I developed custom CRUD library using React compound components pattern for efficient data management in projects. It comes with built in table management and form validation",
+    button: {
+      title: "READMORE",
+      icon: ArrowRightCircle,
+      href: "https://www.npmjs.com/package/crudone",
+    },
+  },
+  {
+    title: "VANILLA REACT",
+    description:
+      "I created a Vanilla JS library to help new developers better understand React core concepts such as component rendering and state management. It is a valuable resource for anyone looking to enhance their React skills.",
+    button: {
+      title: "READMORE",
+      icon: ArrowRightCircle,
+      href: "https://github.com/mnindrazaka/vanilla-react",
+    },
+  },
+  {
+    title: "CODE SEND",
+    description:
+      "I created Code Send, a platform similar to Code Push, as part of my thesis project. It gave me valuable insights into CodePush and how it can improve the user experience of mobile apps.",
+    button: {
+      title: "READMORE",
+      icon: ArrowRightCircle,
+      href: "https://github.com/mnindrazaka/code-send",
+    },
+  },
+];
 
 export function PortfolioSection() {
   return (
@@ -32,63 +65,16 @@ export function PortfolioSection() {
           </Anchor>
         </YStack>
 
-        <YStack flex={1} space="$3" width="100%" justifyContent="space-between">
-          <H4>CRUDONE</H4>
-
-          <Paragraph size="$5">
-            I developed custom CRUD library using React compound components
-            pattern for efficient data management in projects. It comes with
-            built in table management and form validation
-          </Paragraph>
-
-          <XStack>
-            <Anchor
-              href="https://www.npmjs.com/package/crudone"
-              textDecorationLine="none"
-            >
-              <Button icon={ArrowRightCircle}>READ MORE</Button>
-            </Anchor>
-          </XStack>
-        </YStack>
-
-        <YStack flex={1} space="$3" width="100%" justifyContent="space-between">
-          <H4>VANILLA REACT</H4>
-
-          <Paragraph size="$5">
-            I created a Vanilla JS library to help new developers better
-            understand React core concepts such as component rendering and state
-            management. It is a valuable resource for anyone looking to enhance
-            their React skills.
-          </Paragraph>
-
-          <XStack>
-            <Anchor
-              href="https://github.com/mnindrazaka/vanilla-react"
-              textDecorationLine="none"
-            >
-              <Button icon={ArrowRightCircle}>READ MORE</Button>
-            </Anchor>
-          </XStack>
-        </YStack>
-
-        <YStack flex={1} space="$3" width="100%" justifyContent="space-between">
-          <H4>CODE SEND</H4>
-
-          <Paragraph size="$5">
-            I created Code Send, a platform similar to Code Push, as part of my
-            thesis project. It gave me valuable insights into CodePush and how
-            it can improve the user experience of mobile apps.
-          </Paragraph>
-
-          <XStack>
-            <Anchor
-              href="https://github.com/mnindrazaka/code-send"
-              textDecorationLine="none"
-            >
-              <Button icon={ArrowRightCircle}>READ MORE</Button>
-            </Anchor>
-          </XStack>
-        </YStack>
+        {items.map((item) => (
+          <ItemCard
+            key={item.title}
+            {...item}
+            flex={1}
+            width="100%"
+            justifyContent="space-between"
+            isTransparent
+          />
+        ))}
       </YStack>
     </YStack>
   );

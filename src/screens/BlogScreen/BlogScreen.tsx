@@ -1,4 +1,4 @@
-import { Container } from "@/components";
+import { Container, Divider } from "@/components";
 import { ArrowLeft } from "@tamagui/lucide-icons";
 import Link from "next/link";
 import React from "react";
@@ -35,15 +35,7 @@ export function BlogScreen(props: BlogScreenProps) {
               <H3 textAlign="center" $gtXs={{ textAlign: "left" }}>
                 BLOGS
               </H3>
-              <YStack
-                width={64}
-                height={3}
-                theme="purple_Button"
-                backgroundColor="$background"
-                borderRadius="$12"
-                alignSelf="center"
-                $gtXs={{ alignSelf: "flex-start" }}
-              ></YStack>
+              <Divider alignSelf="center" $gtSm={{ alignSelf: "flex-start" }} />
               <Paragraph
                 size="$8"
                 textAlign="center"

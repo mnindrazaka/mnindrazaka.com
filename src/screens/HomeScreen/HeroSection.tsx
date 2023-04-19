@@ -1,3 +1,4 @@
+import { Divider } from "@/components";
 import { Github, Linkedin, Mail } from "@tamagui/lucide-icons";
 import React from "react";
 import { Anchor, Button, H1, Image, Paragraph, XStack, YStack } from "tamagui";
@@ -37,13 +38,7 @@ export function HeroSection() {
         <Paragraph textAlign="center" $gtXs={{ textAlign: "left" }}>
           SENIOR FRONTEND ENGINEER
         </Paragraph>
-        <YStack
-          width={64}
-          height={3}
-          theme="purple_Button"
-          backgroundColor="$background"
-          borderRadius="$12"
-        ></YStack>
+        <Divider />
         <Paragraph
           size="$9"
           maxWidth={500}

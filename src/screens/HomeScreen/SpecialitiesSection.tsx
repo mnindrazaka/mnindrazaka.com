@@ -1,3 +1,4 @@
+import { Divider } from "@/components";
 import { Code2, Rocket, Settings } from "@tamagui/lucide-icons";
 import React from "react";
 import { H4, H5, Paragraph, XStack, YStack, YStackProps } from "tamagui";
@@ -55,15 +56,7 @@ export function SpecialitiesSection() {
         <H5 textAlign="center" $gtXs={{ textAlign: "left" }}>
           SPECIALITIES
         </H5>
-        <YStack
-          width={64}
-          height={3}
-          theme="purple_Button"
-          backgroundColor="$background"
-          borderRadius="$12"
-          alignSelf="center"
-          $gtXs={{ alignSelf: "flex-start" }}
-        ></YStack>
+        <Divider alignSelf="center" $gtXs={{ alignSelf: "flex-start" }} />
         <Paragraph
           size="$8"
           fontWeight="$1"

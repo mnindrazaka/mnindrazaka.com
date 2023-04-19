@@ -1,3 +1,4 @@
+import { Divider } from "@/components";
 import { ArrowRightCircle, Book, Share2, Users } from "@tamagui/lucide-icons";
 import React from "react";
 import {
@@ -18,15 +19,7 @@ export function TeachingSection() {
         <H4 textAlign="center" $gtSm={{ textAlign: "left" }}>
           MENTORING AND TEACHING
         </H4>
-        <YStack
-          width={64}
-          height={3}
-          theme="purple_Button"
-          backgroundColor="$background"
-          borderRadius="$12"
-          alignSelf="center"
-          $gtSm={{ alignSelf: "flex-start" }}
-        ></YStack>
+        <Divider alignSelf="center" $gtSm={{ alignSelf: "flex-start" }} />
         <XStack
           flexWrap="wrap"
           justifyContent="center"

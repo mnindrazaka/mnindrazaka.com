@@ -1,3 +1,4 @@
+import { Divider } from "@/components";
 import { ArrowRightCircle } from "@tamagui/lucide-icons";
 import React from "react";
 import { Anchor, Button, H3, H4, Paragraph, XStack, YStack } from "tamagui";
@@ -18,13 +19,7 @@ export function PortfolioSection() {
       <YStack space="$8" $gtMd={{ flexDirection: "row" }}>
         <YStack flex={1} space="$3" width="100%">
           <H3>TOOLS AND LIBRARY</H3>
-          <YStack
-            width={64}
-            height={3}
-            theme="purple_Button"
-            backgroundColor="$background"
-            borderRadius="$12"
-          ></YStack>
+          <Divider />
           <Paragraph size="$8" fontWeight="normal">
             Explore my collection of innovative libraries and tools that
             showcase my expertise in web development.

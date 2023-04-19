@@ -1,17 +1,11 @@
-import { Container, Divider } from "@/components";
+import { BlogCard, Container, Divider, Post } from "@/components";
 import { ArrowLeft } from "@tamagui/lucide-icons";
 import Link from "next/link";
 import React from "react";
-import { H3, H5, Image, Paragraph, ScrollView, XStack, YStack } from "tamagui";
+import { H3, Paragraph, ScrollView, XStack, YStack } from "tamagui";
 
 export type BlogScreenProps = {
-  posts: {
-    title: string;
-    description: string;
-    href: string;
-    imageUrl: string;
-    date: string;
-  }[];
+  posts: Post[];
 };
 
 export function BlogScreen(props: BlogScreenProps) {
@@ -47,39 +41,16 @@ export function BlogScreen(props: BlogScreenProps) {
           </YStack>
 
           <XStack flexWrap="wrap">
-            {props.posts.map(({ title, imageUrl, date, href }) => (
-              <YStack
-                key={title}
+            {props.posts.map((post) => (
+              <BlogCard
+                key={post.title}
+                {...post}
                 flexBasis="100%"
                 marginBottom="$8"
                 marginRight="$8"
                 $gtXs={{ flexBasis: "42%" }}
                 $gtSm={{ flexBasis: "25%" }}
-              >
-                <Link href={href} style={{ textDecoration: "none" }}>
-                  <YStack space="$3">
-                    <Image
-                      source={{ uri: imageUrl }}
-                      defaultSource={{ uri: imageUrl }}
-                      aspectRatio={1}
-                      width="100%"
-                      height="100%"
-                      alt={title}
-                      borderRadius="$5"
-                    />
-                    <H5
-                      flex={1}
-                      textAlign="center"
-                      $gtXs={{ textAlign: "left" }}
-                    >
-                      {date}
-                    </H5>
-                    <H3 textAlign="center" $gtXs={{ textAlign: "left" }}>
-                      {title}
-                    </H3>
-                  </YStack>
-                </Link>
-              </YStack>
+              />
             ))}
           </XStack>
         </YStack>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "@/components";
+import { Container, Post } from "@/components";
 import { ScrollView } from "tamagui";
 import { HeroSection } from "./HeroSection";
 import { SpecialitiesSection } from "./SpecialitiesSection";
@@ -9,13 +9,7 @@ import { BlogSection } from "./BlogSection";
 import { FooterSection } from "./FooterSection";
 
 export type HomeScreenProps = {
-  posts: {
-    title: string;
-    description: string;
-    href: string;
-    imageUrl: string;
-    date: string;
-  }[];
+  posts: Post[];
 };
 
 export function HomeScreen(props: HomeScreenProps) {

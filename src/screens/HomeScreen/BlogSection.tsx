@@ -1,17 +1,11 @@
-import { Divider } from "@/components";
+import { BlogCard, Divider, Post } from "@/components";
 import { ArrowRightCircle } from "@tamagui/lucide-icons";
 import Link from "next/link";
 import React from "react";
-import { Button, H3, H5, Image, Paragraph, YStack } from "tamagui";
+import { Button, H3, Paragraph, YStack } from "tamagui";
 
 export type BlogSectionProps = {
-  posts: {
-    title: string;
-    description: string;
-    href: string;
-    imageUrl: string;
-    date: string;
-  }[];
+  posts: Post[];
 };
 
 export function BlogSection(props: BlogSectionProps) {
@@ -40,28 +34,8 @@ export function BlogSection(props: BlogSectionProps) {
       </YStack>
 
       <YStack space="$8" $gtXs={{ flexDirection: "row" }}>
-        {props.posts.map(({ title, imageUrl, date, href }) => (
-          <YStack key={title} flex={1} width="100%">
-            <Link href={href} style={{ textDecoration: "none" }}>
-              <YStack space="$3">
-                <Image
-                  source={{ uri: imageUrl }}
-                  defaultSource={{ uri: imageUrl }}
-                  aspectRatio={1}
-                  width="100%"
-                  height="100%"
-                  alt={title}
-                  borderRadius="$5"
-                />
-                <H5 flex={1} textAlign="center" $gtXs={{ textAlign: "left" }}>
-                  {date}
-                </H5>
-                <H3 textAlign="center" $gtXs={{ textAlign: "left" }}>
-                  {title}
-                </H3>
-              </YStack>
-            </Link>
-          </YStack>
+        {props.posts.map((post) => (
+          <BlogCard key={post.title} {...post} flex={1} width="100%" />
         ))}
       </YStack>
     </YStack>

@@ -3,16 +3,7 @@ import { ArrowLeft } from "@tamagui/lucide-icons";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import {
-  H2,
-  H4,
-  H5,
-  Image,
-  Paragraph,
-  ScrollView,
-  XStack,
-  YStack,
-} from "tamagui";
+import { H2, H5, Image, Paragraph, ScrollView, XStack, YStack } from "tamagui";
 import { MarkdownView } from "./MarkdownView";
 
 export type BlogDetailScreenProps = {

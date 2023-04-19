@@ -1,5 +1,5 @@
 import { Container } from "@/components";
-import { ArrowLeft, ArrowLeftCircle } from "@tamagui/lucide-icons";
+import { ArrowLeft } from "@tamagui/lucide-icons";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";

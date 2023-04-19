@@ -1,7 +1,7 @@
 import { ArrowRightCircle } from "@tamagui/lucide-icons";
 import Link from "next/link";
 import React from "react";
-import { Button, H3, H5, Image, Paragraph, XStack, YStack } from "tamagui";
+import { Button, H3, H5, Image, Paragraph, YStack } from "tamagui";
 
 export type BlogSectionProps = {
   posts: {

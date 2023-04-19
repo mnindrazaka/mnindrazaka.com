@@ -1,6 +1,6 @@
 import { Code2, Rocket, Settings } from "@tamagui/lucide-icons";
 import React from "react";
-import { H3, H4, H5, Paragraph, XStack, YStack, YStackProps } from "tamagui";
+import { H4, H5, Paragraph, XStack, YStack, YStackProps } from "tamagui";
 
 type SkillCardProps = {
   title: string;

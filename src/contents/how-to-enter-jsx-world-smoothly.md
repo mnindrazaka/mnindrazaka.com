@@ -128,13 +128,6 @@ And then, we can render the element that we created like this
 
 We can use `ReactDOM.render` to put the React element that we already create to the DOM. For the first argument, we need to pass the element that we want to render, which is `newElement`. For the second argument, we need to pass where we want to put that element, which is `rootElement`
 
-So, without JSX, we can create an element and render it to the browser. To help you understand what going on, here is the side by side comparison of `DOM API` and `React API` that we use before
-
-| DOM API                          |                React API                |
-| -------------------------------- | :-------------------------------------: |
-| `document.createElement`         |          `React.createElement`          |
-| `rootElement.append(newElement)` | `React.render(newElement, rootElement)` |
-
 ### Tired of writing many syntaxes? you can use JSX instead
 
 From the previous point, we already know that we can create an element using `React.createElement`. But, imagine that we need to build a full website layout using that function. It will make us extremely tired. So JSX comes to the rescue. How if I tell you that instead of using `React.createElement` to create react element, we can use JSX syntax like this

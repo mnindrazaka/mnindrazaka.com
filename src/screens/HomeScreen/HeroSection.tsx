@@ -3,6 +3,9 @@ import { Github, Linkedin, Mail } from "@tamagui/lucide-icons";
 import React from "react";
 import { Anchor, Button, H1, Image, Paragraph, XStack, YStack } from "tamagui";
 
+const PHOTO_URL =
+  "https://media.licdn.com/dms/image/D5603AQGeLSta62egIA/profile-displayphoto-shrink_800_800/0/1686710685247?e=1692835200&v=beta&t=-fQzYY7KIY9HPdhT4_0yIfc2nYujojT-Z5yxuyE1Vp0";
+
 export function HeroSection() {
   return (
     <YStack
@@ -17,12 +20,8 @@ export function HeroSection() {
           borderRadius="$12"
           width={280}
           height={280}
-          source={{
-            uri: "https://media.licdn.com/dms/image/C5603AQEsF3F--ivLJg/profile-displayphoto-shrink_800_800/0/1622887591562?e=1687392000&v=beta&t=XXWTWu0wWpM-5b3Mwob8sWXCKm0oYiuxTSriQc-pUk8",
-          }}
-          defaultSource={{
-            uri: "https://media.licdn.com/dms/image/C5603AQEsF3F--ivLJg/profile-displayphoto-shrink_800_800/0/1622887591562?e=1687392000&v=beta&t=XXWTWu0wWpM-5b3Mwob8sWXCKm0oYiuxTSriQc-pUk8",
-          }}
+          source={{ uri: PHOTO_URL }}
+          defaultSource={{ uri: PHOTO_URL }}
           alt="image profile"
         />
       </YStack>

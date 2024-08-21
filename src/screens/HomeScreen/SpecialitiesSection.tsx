@@ -7,20 +7,44 @@ const items: ItemCardProps[] = [
   {
     title: "WEB DEVELOPMENT",
     description:
-      "I'm a frontend engineer with 4 years of experience in React, Typescript, and Next.js. I also have expertise in Node.js and Golang for backend development. My focus is on building scalable, maintainable, and user-friendly applications.",
+      "I'm a frontend engineer with 5 years of experience in React, Typescript, and Next.js. I also have expertise in Node.js and Golang for backend development. My focus is on building scalable, maintainable, and user-friendly applications.",
     icon: <Code2 />,
+    tags: [
+      "Javascript",
+      "Typescript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "Golang",
+      "Docker",
+      "Kubernetes",
+    ],
   },
   {
     title: "AUTOMATED TESTING",
     description:
       "I love implementing automated testing to ensure the highest level of quality and reliability. With my expertise in testing frameworks such as Jest and Cypress, I can help your team achieve faster and more effective testing. ",
     icon: <Settings />,
+    tags: [
+      "Jest",
+      "React Testing Library",
+      "Cypress",
+      "Mock Service Worker",
+      "Storybook",
+    ],
   },
   {
     title: "WEB PERFORMANCE OPTIMIZATION",
     description:
       "I have experience analyzing and improving page load times, reducing server response times, and implementing caching strategies. With my skills in modern web development frameworks and tools, I can help your business achieve its performance goals and provide a smooth user experience for your customers.",
     icon: <Rocket />,
+    tags: [
+      "Javascript Performance",
+      "Google Lighthouse",
+      "React Profiler",
+      "Sentry",
+      "Grafana",
+    ],
   },
 ];
 

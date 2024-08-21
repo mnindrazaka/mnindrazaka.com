@@ -17,6 +17,7 @@ export type ItemCardProps = {
   description: string;
   icon?: React.ReactNode;
   isTransparent?: boolean;
+  tags?: string[];
   button?: {
     title: string;
     href: string;
@@ -31,6 +32,7 @@ export function ItemCard({
   tagline,
   isTransparent,
   button,
+  tags = [],
   ...yStackProps
 }: ItemCardProps) {
   return (
@@ -67,6 +69,20 @@ export function ItemCard({
       {tagline ? <H3 fontWeight="normal">{tagline}</H3> : null}
 
       <Paragraph size="$5">{description}</Paragraph>
+
+      <XStack gap={8} flexWrap="wrap">
+        {tags.map((tag) => (
+          <YStack
+            key={tag}
+            paddingVertical="$1"
+            paddingHorizontal="$3"
+            backgroundColor="$purple5"
+            borderRadius="$5"
+          >
+            <Paragraph>{tag}</Paragraph>
+          </YStack>
+        ))}
+      </XStack>
 
       {button ? (
         <XStack>

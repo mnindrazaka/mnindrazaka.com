@@ -7,6 +7,7 @@ import { TeachingSection } from "./TeachingSection";
 import { PortfolioSection } from "./PortfolioSection";
 import { BlogSection } from "./BlogSection";
 import { FooterSection } from "./FooterSection";
+import { GatherloopSection } from "./GatherloopSection";
 
 export type HomeScreenProps = {
   posts: Post[];
@@ -19,6 +20,7 @@ export function HomeScreen(props: HomeScreenProps) {
         <HeroSection />
         <SpecialitiesSection />
         <TeachingSection />
+        <GatherloopSection />
         <PortfolioSection />
         <BlogSection posts={props.posts} />
       </Container>

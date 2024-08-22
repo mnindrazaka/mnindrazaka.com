@@ -48,7 +48,7 @@ export function TeachingSection() {
             >
               As an experienced mentor with 6 years of teaching experience, I am
               passionate about helping junior developers unlock their potential
-              and succeed in the software engineering industry. I've guided both
+              and succeed in the software engineering industry. I have guided both
               new graduates and seasoned professionals, fostering growth through
               shared knowledge and expertise.
             </Paragraph>

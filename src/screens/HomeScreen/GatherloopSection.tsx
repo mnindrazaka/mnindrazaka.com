@@ -1,6 +1,7 @@
 import { Divider } from "@/components";
+import { ArrowRightCircle } from "@tamagui/lucide-icons";
 import React from "react";
-import { H4, Image, Paragraph, XStack, YStack } from "tamagui";
+import { Anchor, Button, H4, Image, Paragraph, XStack, YStack } from "tamagui";
 
 export function GatherloopSection() {
   return (
@@ -40,6 +41,11 @@ export function GatherloopSection() {
               personal growth, bringing together diverse interests and expertise
               to enrich our collective experience.
             </Paragraph>
+            <Anchor href="http://gatherloop.co" textDecorationLine="none">
+              <Button icon={ArrowRightCircle} theme="purple">
+                GATHERLOOP WEBSITE
+              </Button>
+            </Anchor>
           </YStack>
           <Image
             maxWidth={280}

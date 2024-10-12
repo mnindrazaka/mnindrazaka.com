@@ -1,10 +1,12 @@
 import { HomeScreen, HomeScreenProps } from "@/screens";
-import { GetStaticProps } from "next";
+import { GetServerSideProps } from "next";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-export const getStaticProps: GetStaticProps<HomeScreenProps> = async () => {
+export const getServerSideProps: GetServerSideProps<
+  HomeScreenProps
+> = async () => {
   const fileNames = fs.readdirSync(path.resolve("src", "contents"));
 
   const posts: HomeScreenProps["posts"] = [];

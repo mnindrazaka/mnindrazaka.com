@@ -36,6 +36,10 @@ export const getStaticProps: GetStaticProps<HomeScreenProps> = async () => {
           new Date(nextPost.date).getTime() - new Date(prevPost.date).getTime()
       ),
     },
+    redirect: {
+      permanent: false,
+      destination: "https://linkedin.com/in/mnindrazaka",
+    },
   };
 };
 

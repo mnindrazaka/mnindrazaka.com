@@ -38,10 +38,6 @@ export const getServerSideProps: GetServerSideProps<
           new Date(nextPost.date).getTime() - new Date(prevPost.date).getTime()
       ),
     },
-    redirect: {
-      permanent: false,
-      destination: "https://linkedin.com/in/mnindrazaka",
-    },
   };
 };
 

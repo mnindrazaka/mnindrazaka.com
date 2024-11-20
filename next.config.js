@@ -11,15 +11,6 @@ const nextConfig = {
     });
     return config;
   },
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "https://www.linkedin.com/in/mnindrazaka",
-        permanent: false,
-      },
-    ];
-  },
 };
 
 module.exports = function (name, { defaultConfig }) {

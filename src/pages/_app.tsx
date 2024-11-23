@@ -19,7 +19,11 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>M. Nindra Zaka</title>
       </Head>
-      <NextThemeProvider onChangeTheme={setTheme}>
+      <NextThemeProvider
+        onChangeTheme={(theme) => {
+          if (theme === "light" || theme === "dark") setTheme(theme);
+        }}
+      >
         <TamaguiProvider
           config={config}
           disableInjectCSS

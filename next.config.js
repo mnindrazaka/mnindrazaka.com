@@ -9,6 +9,11 @@ const nextConfig = {
       test: /\.md$/,
       use: "raw-loader",
     });
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "react-native$": "react-native-web",
+      "react-native-svg$": "react-native-svg-web",
+    };
     return config;
   },
 };
@@ -22,7 +27,6 @@ module.exports = function (name, { defaultConfig }) {
   const tamaguiPlugin = withTamagui({
     config: "./tamagui.config.ts",
     components: ["tamagui"],
-    useReactNativeWebLite: true,
     disableExtraction: process.env.NODE_ENV === "development",
   });
 

@@ -3,7 +3,7 @@ import { NextThemeProvider, useRootTheme } from "@tamagui/next-theme";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import React, { useMemo } from "react";
-import { TamaguiProvider } from "tamagui";
+import { TamaguiProvider, Theme } from "tamagui";
 
 import config from "../../tamagui.config";
 
@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
           disableRootThemeClass
           defaultTheme={theme}
         >
-          {contents}
+          <Theme name="purple">{contents}</Theme>
         </TamaguiProvider>
       </NextThemeProvider>
     </>

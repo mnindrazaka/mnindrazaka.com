@@ -1,24 +1,11 @@
 import { createTamagui } from "tamagui";
-import { config } from "@tamagui/config";
+import { config } from "@tamagui/config/v3";
 
-const appConfig = createTamagui({
-  ...config,
-  fonts: {
-    ...config.fonts,
-    heading: {
-      ...config.fonts.heading,
-      family: "Lato, Helvetica, Arial, sans-serif",
-    },
-    body: {
-      ...config.fonts.body,
-      family: "Lato, Helvetica, Arial, sans-serif",
-    },
-  },
-});
+const appConfig = createTamagui(config);
 
 export type AppConfig = typeof appConfig;
 
-declare module "@tamagui/core" {
+declare module "tamagui" {
   interface TamaguiCustomConfig extends AppConfig {}
 }
 

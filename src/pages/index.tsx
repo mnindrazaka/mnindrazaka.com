@@ -15,20 +15,18 @@ export const getServerSideProps: GetServerSideProps<
     const content = await import(`../contents/${fileName}`);
     const meta = matter(content.default);
 
-    if (meta.data.highligted) {
-      posts.push({
-        title: meta.data.title,
-        description: meta.data.description,
-        href: `/blog/${fileName.replace(".md", "")}`,
-        imageUrl: meta.data.image,
-        date: new Date(meta.data.date).toLocaleDateString(undefined, {
-          weekday: "long",
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        }),
-      });
-    }
+    posts.push({
+      title: meta.data.title,
+      description: meta.data.description,
+      href: `/blog/${fileName.replace(".md", "")}`,
+      imageUrl: meta.data.image,
+      date: new Date(meta.data.date).toLocaleDateString(undefined, {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }),
+    });
   }
 
   return {

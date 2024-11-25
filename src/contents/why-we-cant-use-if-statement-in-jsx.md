@@ -4,6 +4,7 @@ date: 2020-12-15T05:00:00Z
 description: Understanding why if statement can't be used in JSX
 image: https://images.unsplash.com/photo-1518644730709-0835105d9daa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80
 caption: Photo by [Bruce Mars](https://unsplash.com/photos/xj8qrWvuOEs)
+highligted: true
 ---
 
 When I first started to learn React, i have a case to display an element in JSX based on condition. I started to think "Ok, i want to display this element based on condition, so i am gonna use if statement". So, my component look like this :

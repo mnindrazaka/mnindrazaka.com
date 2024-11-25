@@ -4,6 +4,7 @@ date: 2021-08-15T05:00:00Z
 description: How to setup reason for javascript development using bucklescript
 image: https://images.unsplash.com/photo-1602663491496-73f07481dbea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1650&q=80
 caption: Photo by [Takuya Nagaoka](https://unsplash.com/photos/fENvSZUzbzU)
+highligted: true
 ---
 
 Reason is a programming language that can be compiled into javascript using a tool called bucklescript. So, in order to set up reason for javascript development, we need to create a node project, install bucklescript, create a reason file, then compile it to javascript. Let's talk about it in detail one by one :

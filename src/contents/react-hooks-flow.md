@@ -4,6 +4,7 @@ date: 2021-01-17T05:00:00Z
 description: Understanding React hooks flow
 image: https://images.unsplash.com/photo-1482685945432-29a7abf2f466?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1666&q=80
 caption: Photo by [Mike Lewis HeadSmart Media](https://unsplash.com/photos/waAAaeC9hns)
+highligted: true
 ---
 
 February 16, 2019, the React team has introduced React hooks, special functions that can make developers use features that previously only available on the class component (e.g, state, lifecycle) in the function component. React hooks make community to migrate from class component to function component

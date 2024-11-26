@@ -24,7 +24,9 @@ export const AccentProvider = (props: AccentProviderProps) => {
   const [color, setColor] = useState<ThemeName>("blue");
   return (
     <Context.Provider value={{ color, setColor }}>
-      <YStack theme={color}>{props.children}</YStack>
+      <YStack theme={color} flex={1}>
+        {props.children}
+      </YStack>
     </Context.Provider>
   );
 };

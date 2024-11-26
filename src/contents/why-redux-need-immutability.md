@@ -7,14 +7,12 @@ caption: Photo by [Georg Bommeli](https://unsplash.com/photos/ybtUqjybcjE)
 highligted: true
 ---
 
-{{< figure src="/images/post/why-reducer-need-immutability.jpeg" caption="Photo by [Georg Bommeli](https://unsplash.com/photos/ybtUqjybcjE)" >}}
-
-When we working on a redux reducer, we need to make sure that we don't mutate the previous state object. Instead, we need to create a new object : 
+When we working on a redux reducer, we need to make sure that we don't mutate the previous state object. Instead, we need to create a new object :
 
 ```javascript {linenos=table}
 function bookReducer(prevState, action) {
   switch (action.type) {
-    case 'SET_TITLE':
+    case "SET_TITLE":
       // create a new object
       return { ...prevState, title: action.title };
     default:
@@ -28,10 +26,10 @@ On that reducer, if we want to set the title of the book, we need to create a ne
 ```javascript {linenos=table}
 function bookReducer(prevState, action) {
   switch (action.type) {
-    case 'SET_TITLE':
+    case "SET_TITLE":
       // edit the title of previous state object
-      prevState.title = action.title
-      return prevState
+      prevState.title = action.title;
+      return prevState;
     default:
       throw new Error();
   }
@@ -47,13 +45,13 @@ This happens because redux using a shallow equality check to compare the previou
 ```javascript {linenos=table}
 function booksReducer(prevState, action) {
   switch (action.type) {
-    case 'SET_TITLE':
+    case "SET_TITLE":
       // This will create a new reference. Component will rerendered
       return { ...prevState, title: action.title };
 
       // This will use the previous reference. Component will not rerendered
-      prevState.title = action.title
-      return prevState
+      prevState.title = action.title;
+      return prevState;
 
     default:
       throw new Error();
@@ -65,6 +63,6 @@ function booksReducer(prevState, action) {
 
 The next question is, why redux use shallow equality check to determine if the state is changed or not? why don't just compare by its value instead (deep equality check)? If redux compares the state by its value instead of reference, it will take a longer time to determine if there is an update or not. Because it needs to check every property of the state one by one.
 
-### Summary 
+### Summary
 
 The reducer needs to return a new object because redux using shallow equality check, which means it check the reference of the state to determine if there is an update on the state or not. It uses the shallow equality check to make the checking process faster, so it doesn't need to compare the object by the value that needs a longer time. You can read more about it here : https://redux.js.org/faq/immutable-data

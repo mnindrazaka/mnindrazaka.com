@@ -35,7 +35,7 @@ export function BlogDetailScreen({
         <meta property="og:image" content={image} />
       </Head>
       <ScrollView overflow="scroll">
-        <Container maxWidth={640} space="$5" paddingVertical="$8">
+        <Container maxWidth={720} space="$5" paddingVertical="$8">
           <Link href="/" style={{ textDecoration: "none" }}>
             <XStack alignItems="center" space="$2">
               <ArrowLeft />

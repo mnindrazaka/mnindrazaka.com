@@ -13,7 +13,7 @@ One of the common hooks is `useEffect` that can enable side effect in function c
 
 After we replace all lifecycle method with `useEffect`, is that function component still has lifecycle ? The answer is yes, and here is the diagram that explains lifecycle of the function component that we call "Hooks Flow"
 
-{{< figure src="/images/post/hook-flow.png" caption="Photo by [donavon](https://github.com/donavon/hook-flow)" >}}
+![react hook flow](https://raw.githubusercontent.com/donavon/hook-flow/master/hook-flow.png)
 
 Confuse ? ok, lets explain it one by one
 

@@ -6,6 +6,7 @@ import React, { useMemo } from "react";
 import { TamaguiProvider, Theme } from "tamagui";
 
 import config from "../../tamagui.config";
+import { AccentProvider } from "@/components/AccentContext";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useRootTheme();
@@ -30,7 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
           disableRootThemeClass
           defaultTheme={theme}
         >
-          <Theme name="purple">{contents}</Theme>
+          <AccentProvider>{contents}</AccentProvider>
         </TamaguiProvider>
       </NextThemeProvider>
     </>

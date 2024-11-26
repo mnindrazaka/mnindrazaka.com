@@ -1,8 +1,8 @@
 import React from "react";
-import { Post } from "@/components";
+import { Post, AccentButton, ColorModeSwitcher } from "@/components";
 import { Github, Linkedin, Menu } from "@tamagui/lucide-icons";
 import dynamic from "next/dynamic";
-import { YStack } from "tamagui";
+import { XStack, YStack } from "tamagui";
 import { useRouter } from "next/router";
 
 export type HomeScreenProps = {
@@ -102,23 +102,37 @@ export function HomeScreen(props: HomeScreenProps) {
       }
       main={
         <YStack marginVertical="$10" gap="$10">
-          <YStack
-            borderBottomColor="$borderColor"
-            borderWidth="$0"
-            borderBottomWidth="$1"
-            borderStyle="dashed"
-            paddingBottom="$10"
+          <Hero
+            title="M. Nindra Zaka"
+            subtitle="Building Scalable Software, Leading Teams, and Mentoring Growth"
+            imageSource="/images/hero.png"
+            primaryButton={{
+              label: "See My Works",
+              onPress: () => router.push("#portfolio"),
+            }}
+          />
+
+          <XStack
+            backgroundColor="$background"
+            themeInverse
+            padding="$5"
+            borderRadius="$5"
+            gap="$10"
+            alignItems="center"
+            $xs={{ flexDirection: "column", gap: "$3" }}
           >
-            <Hero
-              title="M. Nindra Zaka"
-              subtitle="Building Scalable Software, Leading Teams, and Mentoring Growth"
-              imageSource="/images/hero.png"
-              primaryButton={{
-                label: "See My Works",
-                onPress: () => router.push("#portfolio"),
-              }}
-            />
-          </YStack>
+            <ColorModeSwitcher />
+            <XStack gap="$3" flexWrap="wrap">
+              <AccentButton color="red" />
+              <AccentButton color="blue" />
+              <AccentButton color="green" />
+              <AccentButton color="purple" />
+              <AccentButton color="orange" />
+              <AccentButton color="yellow" />
+              <AccentButton color="gray" />
+              <AccentButton color="pink" />
+            </XStack>
+          </XStack>
 
           <YStack id="skills">
             <Features

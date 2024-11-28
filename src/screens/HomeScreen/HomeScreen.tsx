@@ -235,7 +235,7 @@ export function HomeScreen(props: HomeScreenProps) {
                 {
                   title: "Point Of Sale",
                   content:
-                    "I am developing a custom Point of Sale (POS) system tailored for my coffee shop, supporting both web and mobile platforms. This system handles essential functions like registering new menu items and recording customer transactions, while also automating cost and profit calculations. It streamlines financial management by allocating budgets for operational expenses, food costs, and profits, providing a comprehensive and efficient solution for business operations.",
+                    "A custom Point of Sale (POS) system tailored for a coffee shop, supporting both web and mobile platforms, handles essential functions such as registering new menu items and recording customer transactions. It automates cost and profit calculations, streamlining financial management by allocating budgets for operational expenses, food costs, and profits, delivering a comprehensive and efficient solution for business operations.",
                   imageSource: "/images/point-of-sale.png",
                   onPress: () =>
                     router.push("https://github.com/gatherloop/gatherloop-pos"),
@@ -243,7 +243,7 @@ export function HomeScreen(props: HomeScreenProps) {
                 {
                   title: "Tamakit",
                   content:
-                    "I develop Tamakit, a UI kit powered by React Native Web and built with Tamagui. Tamakit streamlines universal development for web and mobile by providing reusable, high-performance components. With a focus on consistency and scalability, Tamakit enables developers to create seamless, cross-platform applications more efficiently",
+                    "Tamakit, a UI kit powered by React Native Web and built with Tamagui, streamlines universal development for web and mobile by providing reusable, high-performance components from a single codebase. With a focus on consistency and scalability, it enables developers to efficiently build seamless, cross-platform applications while maintaining a unified codebase.",
                   imageSource: "/images/tamakit.png",
                   onPress: () =>
                     router.push("https://github.com/mnindrazaka/tamakit"),
@@ -254,7 +254,7 @@ export function HomeScreen(props: HomeScreenProps) {
 
           <YStack id="blog">
             <Blog
-              title="Blog posts"
+              title="Blog Posts"
               subtitle="Explore My Technical Blog for Insightful Reads"
               items={props.posts.map(
                 ({ title, date, description, href, imageUrl }) => ({
